@@ -40,6 +40,8 @@ button {
     text-transform: uppercase;
     font-family: 'Oswald', sans-serif;
     color: #4158D0;
+    transition: background 0.5s;
+    transition: color 0.5s;
 }
 
 button:hover {

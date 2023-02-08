@@ -6,16 +6,22 @@
     <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@600&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;1,900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./styles.css" type="text/css">
-    <link rel="icon" href="./assets/icon.png" type="image/png">
+    <link rel="icon" href="./assets/saturno.png" type="image/png">
     <title>Ailen Grimaldi</title>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="keywords" content="master class, html, ailen grimaldi, ailen rocio">
+    <!-- Le damos a google información sobre nuestro sitio web -->
+    <meta name="description" content="LinkTree Ailen Grimaldi, Programadora Web Freelancer, Abogada UBA con orientación en Derecho Penal y de Familia.">
+    <!-- Le damos a google palabras clave para que nuestra página aparezca, para que Google pueda hacer una mejor indexación -->
+    <meta name="keywords" content="linktree, html, ailen grimaldi, ailen rocio, fullstack web developer, programadora">
+    <!-- Autoría de la página importante en caso de algún problema legal, fecha en la que fue creada el sitio -->
     <meta name="author" content="Ailen Grimaldi">
     <meta name="copyright" content="Ailen Grimaldi 2023">
-    <meta name="robots" content="index follow">
-    <!-- Facebook -->
+    <!-- Google cuando visita nuestra página web, manda a sus spiders (robots) visitan nuestra página y la escanean, leen los enlaces y entran en todas las páginas que están en nuestra página. Ayudamos a los robots diciendo que tiene que indexar y que no, mediante las etiquetas meta -->
+    <!-- Con INDEX le indicamos que debe leer nuestra página -->
+    <meta name="robots" content="index nofollow">
+    <!-- Facebook openGraph -->
     <meta property="og:title" content="linktree/GrimaldiAilen">
     <meta property="og:description" content="Abogacía y Programación">
     <meta property="og:type" content="WebApp">
@@ -24,37 +30,42 @@
     <!-- Twitter -->
     <meta property="twitter:title" content="linktree/GrimaldiAilen">
     <meta property="twitter:description" content="Abogacía y Programación">
-    <meta property="twitter:type" content="WebApp">
+    <meta property="twitter:type" content="linktree">
     <meta property="twitter:image" content="./assets/ag.png">
     <meta property="twitter:url" content="ailengrimaldi.com">
 </head>
 <body>
+    <div class="appContainer" itemscope itemtype="https://schema.org/Person" >
     <header>
-        <svg height="200" width="200">
-            <circle cx="100" cy="100" r="40" fill="#f3e9dc"/>
-        </svg>
-        <h3>@ailenrg</h3>
+        <div itemprop="image" class="imagen"></div>
+        <h3 class="title">@ailenrg</h3>
     </header>
     <nav>
-        <ul>
-            <li><a href="https://www.linkedin.com/in/ailenrociogrimaldi/"><i></i></a></li>
-            <li><a href="https://github.com/ail3ngrimaldi"><i></i></a></li>
-            <li><a href="https://twitter.com/ailenrg"><i></i></a></li>
-            <li><a href="https://www.instagram.com/ailenrgr/?utm_medium=copy_link"><i></i></a></li>
+        <ul class="redesSociales">
+            <li><a itemprop="sameAs" href="https://www.linkedin.com/in/ailenrociogrimaldi/"><img class="contraste" src="./assets/linkedin.png" alt="linkedin"></a></li>
+            <li><a href="https://github.com/ail3ngrimaldi"><img src="./assets/github.png" alt="github"></a></li>
+            <li><a href="https://twitter.com/ailenrg"><img src="./assets/twitter.png" alt="twitter"></a></li>
+            <li><a itemprop="email" href="mailto:ailenrgrimaldi@gmail.com?subject=Mail from "><img src="./assets/email.png" alt="instagram"></a></li>
         </ul>
     </nav>
     <section class="paragraph">
-        <p>
-            Bienvenidx! Mi nombre es Ailén, soy abogada y programadora, en constante crecimiento y aprendizaje.
+        <p itemprop="description">
+            Bienvenidx! Mi nombre es <strong itemprop="name">Ailén Grimaldi</strong>, soy <strong itemprop="jobTitle">abogada y programadora</strong>, en constante crecimiento y aprendizaje.
             A continuación encontrarás links de interés a mis proyectos actuales y pasados:
         </p>  
     </section>
     <section class="buttons">
         <ul>
-            <li><a href="ailengrimaldi.com"><button>Mi portfolio</button></a></li>
+            <li><a itemprop="url" href="https://ailengrimaldi.com"><button>Mi portfolio</button></a></li>
             <li><a href="https://www.instagram.com/rustinspanish/?utm_medium=copy_link"><button>Aprende rust</button></a></li>
             <li><a href="https://firebase-form-sigma.vercel.app/"><button>Formulario</button></a></li>
         </ul>
     </section> 
+    <footer class="footer">
+        <h5 itemprop="name">Ailen Rocio Grimaldi</h5>
+        <p itemprop="telephone">Contacto: +54 9 11-3432-3195</p>
+        <p itemprop="address">Ubicación: Buenos Aires, Argentina</p>           
+    </footer>
+    </div>
 </body>
 </html>

@@ -101,18 +101,20 @@ button:hover {
     background: transparent;
 }
 
-h5 {
+/* h5 {
     margin-left: 50px;
     margin-bottom: 10px;
-}
+} */
 
-footer {
+.footer {
     width: 90vw;
     border-top: 1px solid black;
     display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: flex-start;
+    flex-wrap: wrap;
+    justify-content: center;
     font-size: 13px;
-    
+}
+
+.footerData {
+    margin: 10px 10px 5px 10px;
 }

@@ -66,7 +66,12 @@ ul {
 li {
     padding-left: 15px;
     padding-right: 10px;
+    transition: transform .2s cubic-bezier(.333,0,0,1);
 }
+
+.redesSociales li a:hover {
+    transform: scale(1.2);
+} 
 
 img {
     color: white;
@@ -94,17 +99,13 @@ button {
     color: #4158D0;
     transition: background 0.5s;
     transition: color 0.5s;
+    cursor: pointer;
 }
 
 button:hover {
     color: white;
     background: transparent;
 }
-
-/* h5 {
-    margin-left: 50px;
-    margin-bottom: 10px;
-} */
 
 .footer {
     width: 90vw;
@@ -119,3 +120,4 @@ button:hover {
 .footerData {
     margin: 10px 10px 5px 10px;
 }
+

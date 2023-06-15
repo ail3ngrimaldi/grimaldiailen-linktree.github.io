@@ -1,6 +1,7 @@
 let ul = document.getElementById('redesSociales');
 let h1 = document.getElementById('userName')
 let p = document.getElementById('description')
+let links = document.getElementById('links')
 
 var bolder1 = `<span itemprop="name"><strong>Ailen Grimaldi</strong></span>`;
 var bolder2 = `<span itemprop="name"><strong>abogada y programadora</strong></span>`;
@@ -32,11 +33,13 @@ let user = {
         }
     ],
     name: '@ailenrg',
-    description: 'Bienvenidx! Mi nombre es ' + bolder1 + ', soy ' + bolder2 + ', en constante crecimiento y aprendizaje. A continuación encontrarás links de interés a mis proyectos actuales y pasados:',
+    description: 'Bienvenidx! Mi nombre es ' + bolder1 + ', soy ' + bolder2 + ', en constante crecimiento y aprendizaje.',
+    links: 'Links de interés:'
 }
 
 h1.innerHTML = user.name;
 p.innerHTML = user.description;
+links.innerHTML = user.links;
 
 let red = '';
 

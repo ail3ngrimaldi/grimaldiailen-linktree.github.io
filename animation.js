@@ -1,5 +1,5 @@
 window.onload = function() {
-    var container = document.querySelector('.container-animation');
+    var container = document.querySelector('#container-animation');
     var logos = Array.from(container.getElementsByClassName('logo'));
 
     // Inicializamos la posición y la velocidad de cada logo.

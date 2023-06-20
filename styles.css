@@ -154,18 +154,12 @@ footer > div {
     width: 100%;
     height: 100vh;
     overflow: hidden;
-    opacity: 0.8;
-}
-
-.container-animation .logo {
-    opacity: 1;
-
 }
 
 .logo {
     position: absolute;
-    width: clamp(30px, 6vw, 60px);
-    height: clamp(30px, 6vw, 60px);
+    width: clamp(25px, 6vw, 50px);
+    height: clamp(25px, 6vw, 50px);
     background-size: cover;
     border-radius: 50%;
 }

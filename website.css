@@ -1,0 +1,80 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100;200;300;400;500;600;700;800;900&display=swap');
+:root {
+    --color-text: rgb(170, 0, 170);
+    --color-verde-claro: hsl(125, 52%, 56%, 25%);
+    --color-claro-verde: hsl(117, 69%, 82%);
+    --color-verde: hsl(125, 52%, 56%);
+    --color-oliva: hsl(163, 49%, 14%);
+    --color-lavanda: hsl(269, 54%, 56%);
+    --color-azul: hsl(200, 96%, 55%);
+    --color-azul-claro: hsl(200, 96%, 55%, 25%);
+    --nav-height: calc(4rem + 2vh);
+    --font-primary: 'Outfit', sans-serif;
+    --font-secundary: 'Plus Jakarta Sans', sans-serif;
+}
+
+html, body {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: var(--font-primary);
+    min-height: 100vh;
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+/*navegacion*/
+nav { height: var(--nav-height); background-color: var(--color-lavanda);  position: fixed;
+  top: 0;
+  right: 0;
+  width: 100%;
+  z-index: 9999;
+  display: flex;
+  justify-content: space-between;
+}
+figure { width: 70%; max-width: 30vmin; }
+figure svg { width: 100%; height: fit-content; fill: var(--color-claro-verde); }
+
+rect { fill: var(--color-claro-verde)}
+#hamburger-icon,
+#close-icon {
+  margin: .5em 2em;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 60px;
+  height: 60px;
+}
+
+button[aria-controls=primary-navigation] {
+  background: transparent;
+  border: none;
+}
+
+button[aria-controls=primary-navigation] > .line {
+  transition: transform 300ms ease-in 300ms, rotate 300ms ease-in, opacity 0ms 300ms;
+  transform-origin: center;
+
+}
+button[aria-expanded="true"] .line {
+  transition: transform 300ms ease-in, rotate 300ms ease-in 300ms, opacity 0ms 300ms;
+  transform-origin: center;
+}
+
+button[aria-expanded="true"] > .top, button[aria-expanded="true"] > .bottom {
+  transform: translate(0, 45);
+}
+button[aria-expanded="true"] .top {
+  rotate: 45deg;
+}
+
+button[aria-expanded="true"] .middle {
+  opacity: 0;
+}
+
+button[aria-expanded="true"] .bottom {
+  rotate: -45deg;
+}

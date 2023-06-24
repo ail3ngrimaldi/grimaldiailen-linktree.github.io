@@ -5,10 +5,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./website.css" type="text/css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
     <title>Virto website</title>
 </head>
 <body>
-    <nav>
+    <nav class="animate__animated animate__slideInDown animate__delay-1s" >
     <figure id="logo" title="Virto Network">
 	<svg id="Capa_1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 2254.43 520">
         <defs>
@@ -22,15 +23,31 @@
         <path class="cls-1" d="m264.07,503.82L492.39,19.9c2.17-4.6-1.19-9.9-6.27-9.9h-106.32c-2.74,0-5.23,1.62-6.34,4.13l-120.61,272.26L131.58,14.11c-1.11-2.5-3.6-4.11-6.34-4.11H16.95c-5.09,0-8.45,5.3-6.27,9.9l228.96,483.92c1.15,2.42,3.59,3.97,6.27,3.97h11.89c2.68,0,5.13-1.55,6.27-3.98Z"/>
     </svg>
 	</figure>
-    <button id="hamburger-icon" aria-controls="primary-navigation" aria-expanded="false">
+    <button class="hamburger-menu" aria-controls="primary-navigation" aria-expanded="false">
         <!-- previos viewbox -10 -10 68 68 -->
-        <svg viewBox="0 0 100 100" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
-           <rect class="line top" width="80" height="7" x="10" y="25" rx="1"></rect>
-           <rect class="line middle" width="80" height="7" x="10" y="45" rx="1"></rect>
-           <rect class="line bottom" width="80" height="7" x="10" y="65" rx="1"></rect>
+        <svg viewBox="0 0 100 100" stroke="white" stroke-linecap="round" stroke-linejoin="round">
+           <rect class="line top" width="80" height="3" x="10" y="25" rx="1"></rect>
+           <rect class="line middle" width="80" height="3" x="10" y="45" rx="1"></rect>
+           <rect class="line bottom" width="80" height="3" x="10" y="65" rx="1"></rect>
         </svg>        
     </button>    
 </nav>
+<section class="menu animate__animated animate__slideInDown">
+   <ul class="animate__delay">
+    <li class="animate__animated animate__fadeInDown delay1 animate__delay-1s "><a href="#about">About</a></li>
+    <li class="animate__animated animate__fadeInDown delay2 animate__delay-1s"><a href="#communities">Communities</a></li>
+    <li class="animate__animated animate__fadeInDown delay3 animate__delay-1s"><a href="#use_cases">Use cases</a></li>
+    <li class="animate__animated animate__fadeInDown delay4 animate__delay-1s"><a href="#blog">Blog</a></li>
+   </ul>
+   <main>
+</section>
+    <section class="hero goes-up"></section>
+    <section id="about"><h2>About Virto</h2></section>
+    <section id="communities"><h2>Local Communities</h2></section>
+    <section id="use_cases"><h2>Use cases</h2></section>
+
+</main>
+
 <script src="./website.js"></script>
 </body>
 </html>

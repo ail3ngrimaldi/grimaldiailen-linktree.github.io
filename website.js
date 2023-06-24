@@ -1,12 +1,16 @@
-let menu = document.querySelector('#hamburger-icon');
-let svg = menu.querySelector('svg');
+let menu = document.querySelector('.hamburger-menu');
+let menu_items = document.querySelector('.menu');
 
-console.log(svg)
 
 menu.addEventListener('click', () => {
-    svg.classList.toggle('open');
-})
-
+  if (menu.getAttribute("aria-expanded") === "true") {
+      menu_items.classList.remove('opened');
+      menu.setAttribute("aria-expanded", "false");
+  } else {
+      menu_items.classList.add('opened');
+      menu.setAttribute("aria-expanded", "true");
+  }
+});
 
 const buttons = document.querySelectorAll("button");
 
@@ -23,3 +27,4 @@ buttons.forEach((button) => {
     }
   });
 });
+

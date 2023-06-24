@@ -1,6 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
 :root {
+    --white: white;
     --color-text: rgb(170, 0, 170);
     --color-verde-claro: hsl(125, 52%, 56%, 25%);
     --color-claro-verde: hsl(117, 69%, 82%);
@@ -14,6 +16,12 @@
     --font-secundary: 'Plus Jakarta Sans', sans-serif;
 }
 
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
 html, body {
     scroll-behavior: smooth;
 }
@@ -24,22 +32,45 @@ body {
     box-sizing: border-box;
     padding: 0;
     margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
 }
+
+/*GENERAL PARA TODAS LAS SECCIONES*/
+section {
+  flex-grow: 1;
+  padding: 20px;
+  box-sizing: border-box;
+  min-height: 100vh;
+}
+
+/* hero section */
+.hero {
+  background:url(./imgvirto/bienv.jpg) no-repeat #c91111; 
+  background-attachment:fixed; 
+  background-size: cover;
+}
+
 /*navegacion*/
-nav { height: var(--nav-height); background-color: var(--color-lavanda);  position: fixed;
+nav { 
+  height: var(--nav-height); 
+  background-color: transparent;  
+  position: fixed;
   top: 0;
   right: 0;
   width: 100%;
-  z-index: 9999;
+  z-index: 999;
   display: flex;
   justify-content: space-between;
 }
-figure { width: 70%; max-width: 30vmin; }
-figure svg { width: 100%; height: fit-content; fill: var(--color-claro-verde); }
 
-rect { fill: var(--color-claro-verde)}
-#hamburger-icon,
-#close-icon {
+figure { width: 70%; max-width: 30vmin; animation-delay: 0s; }
+figure svg { width: 100%; height: fit-content; fill: var(--white); }
+rect { fill: var(--white)}
+
+.hamburger-menu {
+  animation-delay: 0s;
   margin: .5em 2em;
   cursor: pointer;
   display: flex;
@@ -47,6 +78,8 @@ rect { fill: var(--color-claro-verde)}
   justify-content: center;
   width: 60px;
   height: 60px;
+  position: relative;
+  z-index: 999;
 }
 
 button[aria-controls=primary-navigation] {
@@ -54,21 +87,19 @@ button[aria-controls=primary-navigation] {
   border: none;
 }
 
-button[aria-controls=primary-navigation] > .line {
-  transition: transform 300ms ease-in 300ms, rotate 300ms ease-in, opacity 0ms 300ms;
-  transform-origin: center;
-
-}
+/*opening menu*/
 button[aria-expanded="true"] .line {
-  transition: transform 300ms ease-in, rotate 300ms ease-in 300ms, opacity 0ms 300ms;
+  transition: transform 200ms ease-in, rotate 200ms ease-in 200ms, opacity 0ms 200ms;
   transform-origin: center;
 }
 
-button[aria-expanded="true"] > .top, button[aria-expanded="true"] > .bottom {
-  transform: translate(0, 45);
+.bottom {
+  transform: translateY(-20px);
 }
+
 button[aria-expanded="true"] .top {
   rotate: 45deg;
+  transform: translateY(20px);
 }
 
 button[aria-expanded="true"] .middle {
@@ -78,3 +109,65 @@ button[aria-expanded="true"] .middle {
 button[aria-expanded="true"] .bottom {
   rotate: -45deg;
 }
+
+/*closing menu*/
+button[aria-expanded="false"] .top,
+button[aria-expanded="false"] .bottom {
+  transition: transform 200ms ease-in 200ms, rotate 200ms ease-in 200ms;
+  transform-origin: center;
+}
+
+button[aria-expanded="false"] .top {
+  transform: translateY(0px);
+  rotate: 0deg;
+}
+
+button[aria-expanded="false"] .bottom {
+  transform: translateY(0px);
+  rotate: 0deg;
+}
+
+/*menu list*/
+.menu {
+  display: none;
+  position: absolute;
+  z-index: 99;
+  color: black;
+  width: 100%;
+  height: 100%;
+  padding: 5em 0em;
+  background-color: rgba(0, 0, 0, 0.719);
+  font-size: 1.5em;
+  text-transform: uppercase;
+  font-weight: 800;
+  letter-spacing: .6em;
+}
+
+.opened {
+  display: block;
+}
+
+.menu > ul {
+  display: flex;
+  list-style: none;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 2em;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+  transition: .25s ease-in-out;
+}
+
+ul > li :is(:hover, :focus) {
+  letter-spacing: .2em;
+  color: var(--color-lavanda);
+}
+
+.delay1 { --animate-delay: .4s; }
+.delay2 { --animate-delay: .6s; }
+.delay3 { --animate-delay: .8s; }
+.delay4 { --animate-delay: 1s; }

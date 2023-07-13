@@ -8,6 +8,7 @@ body {
     overflow-y: visible;
     justify-content: center;
     align-items: center;
+    margin: 0;
     font-family: 'Lato', sans-serif;
     background-image: linear-gradient(43deg, #4158D0 0%, #C850C0 46%, #FFCC70 100%);
     color: white;
@@ -141,6 +142,7 @@ footer p {
 /*NOT FOUND SPECIFICS*/
 
 .not-found {
+    
     min-height: 100vh;
     overflow-y: hidden;
     justify-content: center;

@@ -33,8 +33,7 @@ let user = {
         }
     ],
     name: '@ailenrg',
-    description: 'Bienvenidx! Mi nombre es ' + bolder1 + ', soy ' + bolder2 + ', en constante crecimiento y aprendizaje.',
-    links: 'Links de interés:'
+    description: 'Hola! Mi nombre es ' + bolder1 + ', soy ' + bolder2 + ', en constante crecimiento y aprendizaje. Links de interés:',
 }
 
 h1.innerHTML = user.name;

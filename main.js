@@ -33,17 +33,17 @@ let user = {
         }
     ],
     name: '@ailenrg',
-    description: 'Bienvenidx! Mi nombre es ' + bolder1 + ', soy ' + bolder2 + ', en constante crecimiento y aprendizaje.',
-    links: 'Links de interés:'
+    description: 'Hola! Mi nombre es ' + bolder1 + ', soy ' + bolder2 + ', en constante crecimiento y aprendizaje. Links de interés:',
 }
 
 h1.innerHTML = user.name;
 p.innerHTML = user.description;
-links.innerHTML = user.links;
 
 let red = '';
 
 function redes () {
+    console.log('donde estan wacho')
+    console.log(red);
     for (let i = 0; i < user.redesSociales.length; i++) {
         red = `<li><a href=${user.redesSociales[i].link}>
         <img src=${user.redesSociales[i].icon} alt=${user.redesSociales[i].alt} />

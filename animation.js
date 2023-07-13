@@ -3,14 +3,32 @@ window.onload = function() {
     var logos = Array.from(container.getElementsByClassName('logo'));
 
     // Inicializamos la posición y la velocidad de cada logo.
-    var logoData = logos.map(function() {
+    var logoData = logos.map(function(logo, i) {
+        // Dividimos el contenedor en regiones en función del número de logos.
+        var regionWidth = container.offsetWidth / 2;
+        var regionHeight = container.offsetHeight / 2;
+    
+        // Decidimos en qué cuadrante colocar cada logo.
+        var quadrant = i % 4;
+        var xBase = (quadrant % 2) * regionWidth;
+        var yBase = Math.floor(quadrant / 2) * regionHeight;
+    
+        // Aseguramos que el logo comienza en su propio cuadrante.
+        var x = Math.random() * (regionWidth - logo.offsetWidth) + xBase;
+        var y = Math.random() * (regionHeight - logo.offsetHeight) + yBase;
+    
+        // Establecemos la velocidad en x e y con un valor fijo más un número aleatorio.
+        var vx = 0.5 + Math.random();
+        var vy = 0.5 + Math.random();
+    
         return {
-            x: Math.random() * (container.offsetWidth - 100), // asegura que los logos no empiecen fuera del contenedor
-            y: Math.random() * (container.offsetHeight - 100),
-            vx: 2, // establecer la velocidad x a un valor fijo
-            vy: 2, // establecer la velocidad y a un valor fijo
+            x: x,
+            y: y,
+            vx: vx,
+            vy: vy,
         };
     });
+    
 
     function moveLogos() {
         logos.forEach(function(logo, i) {

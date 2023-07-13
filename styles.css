@@ -51,6 +51,7 @@ header {
     text-transform: uppercase;
     font-style: italic;
     margin: 0;
+    font-size: clamp(1em, 4vw, 1.725em);
 }
 
 .redesSociales {
@@ -137,7 +138,10 @@ footer p {
     margin: 10px 10px 5px 10px;
 }
 
-footer > div {
-    display: flex;
-    justify-content: space-evenly;
+/*NOT FOUND SPECIFICS*/
+
+.not-found {
+    min-height: 100vh;
+    overflow-y: hidden;
+    justify-content: center;
 }

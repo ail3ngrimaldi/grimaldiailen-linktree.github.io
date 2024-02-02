@@ -1,13 +1,24 @@
-## Link tree
+# Linktree
 
-Bienvenidx! Podés acceder aquí: https://ail3ngrimaldi.github.io/linktree/
+### Proyecto realizado a modo de practica para fijar conocimientos de:
 
-<h3>Previews</h3>
+- Javascript
+- CSS
+- HTML
 
-<h4>Desktop</h4>
+Podés acceder aquí: https://ail3ngrimaldi.github.io/linktree/
 
-![Screenshot 2023-06-12 at 18-16-02 linktree_GrimaldiAilen](https://github.com/ail3ngrimaldi/linktree.github.io/assets/63558201/e06c791b-c58d-4a97-b203-9fcc363fd464)
+## Previews
 
-<h4>Mobile</h4>
+### Desktop
 
-![WhatsApp Image 2023-06-12 at 18 18 15](https://github.com/ail3ngrimaldi/linktree.github.io/assets/63558201/91546389-e9dc-41c7-81ed-d0e821ab65de)
+![Desktop preview](assets/image.png)
+
+### Mobile
+
+![Mobile preview](assets/image-1.png)
+
+>*Si estas empezando en este mundo y queres crear algo como esto, pero no sabes como empezar, 
+> te invito a que agendes una reunión gratuita en mi [Calendly][calendly url] para poder ofrecerte guia y consultar preguntas basicas sobre tus primeros pasos en programación.*
+
+[calendly url]: https://calendly.com/ailenrgrimaldi/30min?month=2023-06

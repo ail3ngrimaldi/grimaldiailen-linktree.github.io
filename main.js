@@ -6,6 +6,9 @@ let links = document.getElementById('links')
 var bolder1 = `<span itemprop="name"><strong>Ailen Grimaldi</strong></span>`;
 var bolder2 = `<span itemprop="name"><strong>abogada y programadora</strong></span>`;
 
+document.fonts.ready.then((fontFaceSet) => {
+    document.body.classList.remove('hidden');
+})
 
 let user = {
     redesSociales: [
@@ -22,7 +25,7 @@ let user = {
         },
         {
             icon: './assets/twitter.png',
-            link: 'https://twitter.com/ailenrg',
+            link: 'https://twitter.com/cuasiboga',
             alt: 'twitter'
         },
         {
@@ -42,7 +45,6 @@ p.innerHTML = user.description;
 let red = '';
 
 function redes () {
-    console.log('donde estan wacho')
     console.log(red);
     for (let i = 0; i < user.redesSociales.length; i++) {
         red = `<li><a href=${user.redesSociales[i].link}>

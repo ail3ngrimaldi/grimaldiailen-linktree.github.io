@@ -160,7 +160,7 @@ section p {
 .section-f .content:nth-child(n+2),
 .centered>div
  {
-  background-image: url(./imgvirto/comingsoon.jpg);
+  background-image: url(./assets/comingsoon.jpg);
   background-size: cover;
   background-position: center;
   min-height: 300px;

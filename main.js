@@ -78,26 +78,24 @@ document.addEventListener('DOMContentLoaded', function () {
         cta.addEventListener('click', handleCtaClick);
     });
 
-    // Telegram tracking
     let telegram = document.getElementById("telegram");
     telegram.addEventListener('click', (event) => {
         event.preventDefault();
         let redirectUrl = new URL('https://t.me/+573107887042');
         const newWindow = window.open(redirectUrl, '_blank');
-        amplitude.track('linktree:click-telegram');
-        setTimeout(() => {
+        amplitude.track('landing:a:click-telegram');
+        setTimeout(function() {
             newWindow.location = redirectUrl.toString();
         }, 200);
     });
 
-    // WhatsApp tracking
     let whatsapp = document.getElementById("whatsapp");
     whatsapp.addEventListener('click', (event) => {
         event.preventDefault();
         let redirectUrl = new URL('https://api.whatsapp.com/send?phone=573107887042');
         const newWindow = window.open(redirectUrl, '_blank');
-        amplitude.track('linktree:click-whatsapp');
-        setTimeout(() => {
+        amplitude.track('landing:a:click-whatsapp');
+        setTimeout(function() {
             newWindow.location = redirectUrl.toString();
         }, 200);
     });

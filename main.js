@@ -83,7 +83,7 @@ document.addEventListener('DOMContentLoaded', function () {
         event.preventDefault();
         let redirectUrl = new URL('https://t.me/+573107887042');
         const newWindow = window.open(redirectUrl, '_blank');
-        amplitude.track('landing:a:click-telegram');
+        amplitude.track('linktree:click-telegram');
         setTimeout(function() {
             newWindow.location = redirectUrl.toString();
         }, 200);
@@ -94,7 +94,7 @@ document.addEventListener('DOMContentLoaded', function () {
         event.preventDefault();
         let redirectUrl = new URL('https://api.whatsapp.com/send?phone=573107887042');
         const newWindow = window.open(redirectUrl, '_blank');
-        amplitude.track('landing:a:click-whatsapp');
+        amplitude.track('linktree:click-whatsapp');
         setTimeout(function() {
             newWindow.location = redirectUrl.toString();
         }, 200);

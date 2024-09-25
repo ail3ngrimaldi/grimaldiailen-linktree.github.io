@@ -1,12 +1,12 @@
 let ul = document.getElementById('redesSociales');
-let h1 = document.getElementById('userName')
-let p = document.getElementById('description')
-let links = document.getElementById('links')
+let h1 = document.getElementById('userName');
+let p = document.getElementById('description');
+let links = document.getElementById('links');
 
 var bolder1 = `<span itemprop="name"><strong>Ailen Grimaldi</strong></span>`;
 var bolder2 = `<span itemprop="name"><strong>abogada y programadora</strong></span>`;
 
-document.fonts.ready.then((fontFaceSet) => {
+document.fonts.ready.then(() => {
     document.body.classList.remove('hidden');
 })
 
@@ -44,15 +44,61 @@ p.innerHTML = user.description;
 
 let red = '';
 
-function redes () {
-    console.log(red);
+function redes() {
     for (let i = 0; i < user.redesSociales.length; i++) {
         red = `<li><a href=${user.redesSociales[i].link}>
         <img src=${user.redesSociales[i].icon} alt=${user.redesSociales[i].alt} />
-        </a></li>`
-
+        </a></li>`;
         ul.innerHTML += red;
     }
 }
 
 redes();
+
+document.addEventListener('DOMContentLoaded', function () {
+    window.amplitude.track('view:linktree');
+
+    function handleCtaClick(event) {
+        event.preventDefault();
+        let redirectUrl = new URL('https://waitlist.virto.network/');
+        redirectUrl.searchParams.set('b', 'b-one');
+
+        if (event.currentTarget.classList.contains('track-superior-cta')) {
+            window.amplitude.track('linktree:click-superior-cta');
+        } else if (event.currentTarget.classList.contains('track-inferior-cta')) {
+            window.amplitude.track('linktree:click-inferior-cta');
+        }
+
+        window.open(redirectUrl.toString(), '_blank');
+    }
+
+    // Añadir event listeners a los CTA
+    let ctas = document.querySelectorAll('.track-superior-cta, .track-inferior-cta');
+    ctas.forEach((cta) => {
+        cta.addEventListener('click', handleCtaClick);
+    });
+
+    // Telegram tracking
+    let telegram = document.getElementById("telegram");
+    telegram.addEventListener('click', (event) => {
+        event.preventDefault();
+        let redirectUrl = new URL('https://t.me/+573107887042');
+        const newWindow = window.open(redirectUrl, '_blank');
+        amplitude.track('linktree:click-telegram');
+        setTimeout(() => {
+            newWindow.location = redirectUrl.toString();
+        }, 200);
+    });
+
+    // WhatsApp tracking
+    let whatsapp = document.getElementById("whatsapp");
+    whatsapp.addEventListener('click', (event) => {
+        event.preventDefault();
+        let redirectUrl = new URL('https://api.whatsapp.com/send?phone=573107887042');
+        const newWindow = window.open(redirectUrl, '_blank');
+        amplitude.track('linktree:click-whatsapp');
+        setTimeout(() => {
+            newWindow.location = redirectUrl.toString();
+        }, 200);
+    });
+});

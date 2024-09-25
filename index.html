@@ -34,37 +34,64 @@
     <meta property="twitter:image" content="./assets/ag.png">
     <meta property="twitter:url" content="ailengrimaldi.com">
     <!-- Amplitude -->
-    <script src="https://cdn.amplitude.com/libs/analytics-browser-2.11.1-min.js.gz"></script><script src="https://cdn.amplitude.com/libs/plugin-session-replay-browser-1.6.22-min.js.gz"></script><script>window.amplitude.add(window.sessionReplay.plugin({sampleRate: 1}));window.amplitude.init('c01c6de047ee2b529155e4c1b72b93b5', {"autocapture":{"elementInteractions":true}});</script>
+    <script src="https://cdn.amplitude.com/libs/analytics-browser-2.11.1-min.js.gz"></script>
+    <script src="https://cdn.amplitude.com/libs/plugin-session-replay-browser-1.6.22-min.js.gz"></script>
+    <script>
+        window.amplitude.add(window.sessionReplay.plugin({ sampleRate: 1 }));
+        window.amplitude.init('c01c6de047ee2b529155e4c1b72b93b5', {
+            "autocapture": {
+                "elementInteractions": true
+            }
+        });
+    </script>
 </head>
 <body>
-    <main class="flex center" itemscope itemtype="https://schema.org/Person" >
-    <header>
-        <div itemprop="image" class="avatar"></div>
-        <h1 class="title" id="userName"></h1>
-    </header>
-    <nav id="main-nav">
-        <ul class="redesSociales flex center" id="redesSociales"></ul>
-    </nav>
-    <section class="paragraph">
-        <p itemprop="description" id="description"></p>
-    </section>
-    <section class="buttons">
-        <ul>
-            <li><a itemprop="url" href="https://nuevo-portfolio-ail3ngrimaldi.vercel.app/"><button>Mi portfolio</button></a></li>
-            <li><a href="https://ail3ngrimaldi.github.io/google.github.io/"><button>Google</button></a></li>
-            <li><a href="https://ail3ngrimaldi.github.io/toDo/"><button>To do app</button></a></li>
-            <li><a href="animation.html"><button>Animación</button></a></li>
-            <li><a href="404.html"><button>Website</button></a></li>
-            <li><a href="home.html"><button>Grid</button></a></li>
-            <li><a href="https://calendly.com/ailenrgrimaldi/30min?month=2023-06"><button>Agendá una reunión</button></a></li>
-        </ul>
-    </section> 
-    <footer class="flex center">
-        <p itemprop="name"> © 2024 - Ailen Rocio Grimaldi</p>
-        <p itemprop="address">Buenos Aires, Argentina</p>     
-    </footer>
-</main>
+    <main class="flex center" itemscope itemtype="https://schema.org/Person">
+        <header>
+            <div itemprop="image" class="avatar"></div>
+            <h1 class="title" id="userName"></h1>
+        </header>
+
+        <nav id="main-nav">
+            <ul class="redesSociales flex center" id="redesSociales"></ul>
+        </nav>
+
+        <section class="paragraph">
+            <p itemprop="description" id="description"></p>
+        </section>
+
+        <section class="buttons">
+            <ul>
+                <li><a class="track-superior-cta" itemprop="url" href="https://nuevo-portfolio-ail3ngrimaldi.vercel.app/">
+                    <button>Mi portfolio</button></a></li>
+                <li><a href="https://ail3ngrimaldi.github.io/google.github.io/">
+                    <button>Google</button></a></li>
+                <li><a href="https://ail3engrimaldi.github.io/toDo/">
+                    <button>To do app</button></a></li>
+                <li><a href="animation.html">
+                    <button>Animación</button></a></li>
+                <li><a href="404.html">
+                    <button>Website</button></a></li>
+                <li><a href="home.html">
+                    <button>Grid</button></a></li>
+                <li><a class="track-inferior-cta" href="https://calendly.com/ailenrgrimaldi/30min?month=2023-06">
+                    <button>Agendá una reunión</button></a></li>
+            </ul>
+        </section>
+
+        <section>
+            <a id="telegram" href="#">Telegram</a>
+            <a id="whatsapp" href="#">WhatsApp</a>
+        </section>
+
+        <footer class="flex center">
+            <p itemprop="name"> © 2024 - Ailen Rocio Grimaldi</p>
+            <p itemprop="address">Buenos Aires, Argentina</p>
+        </footer>
+    </main>
+
     <script src="./main.js"></script>
+    <!-- Agregamos plausible.io como en el código original -->
     <script defer data-domain="ail3ngrimaldi.github.io/linktree" src="https://plausible.io/js/script.js"></script>
 </body>
 </html>

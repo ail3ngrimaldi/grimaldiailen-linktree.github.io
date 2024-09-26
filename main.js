@@ -81,7 +81,7 @@ document.addEventListener('DOMContentLoaded', function () {
     let telegram = document.getElementById("telegram");
     telegram.addEventListener('click', (event) => {
         event.preventDefault();
-        let redirectUrl = new URL('https://t.me/+573107887042');
+        let redirectUrl = new URL('https://t.me/+5491134323195');
         const newWindow = window.open(redirectUrl, '_blank');
         amplitude.track('linktree:click-telegram');
         setTimeout(function() {
@@ -92,7 +92,7 @@ document.addEventListener('DOMContentLoaded', function () {
     let whatsapp = document.getElementById("whatsapp");
     whatsapp.addEventListener('click', (event) => {
         event.preventDefault();
-        let redirectUrl = new URL('https://api.whatsapp.com/send?phone=573107887042');
+        let redirectUrl = new URL('https://api.whatsapp.com/send?phone=5491134323195');
         const newWindow = window.open(redirectUrl, '_blank');
         amplitude.track('linktree:click-whatsapp');
         setTimeout(function() {
